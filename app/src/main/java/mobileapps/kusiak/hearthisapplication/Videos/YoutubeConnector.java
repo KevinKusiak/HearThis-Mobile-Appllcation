@@ -34,7 +34,7 @@ import java.util.List;
 	    //Developer API key a developer can obtain after creating a new project in google developer console
 	    //Developer has to enable YouTube Data API v3 in the project
 	    //Add credentials and then provide the Application's package name and SHA fingerprint
-		public static final String KEY = "AIzaSyCeKKxzzVHjc8Sd2rmTmx4pWL34ojl4ni8";
+		public static final String KEY = "Your API Key";
 
 	    //Package name of the app that will call the YouTube Data API
 		public static final String PACKAGENAME = "mobileapps.kusiak.hearthisapplication";
