@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnAnalyze"
+        android:layout_width="288dp"
+        android:layout_height="56dp"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="706dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="Analyze"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/liveButton"/>
+
+    <Button
+        android:id="@+id/btnRecordVideo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="644dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/selectableItemBackground"
+        android:text="@string/btn_record_video"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/cameraLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/liveButton"
+        android:layout_width="0dp"
+        android:layout_height="127dp"
+        android:background="@drawable/camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/videosButton"
+        app:layout_constraintStart_toEndOf="@+id/eventsButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/eventsButton"
+        android:layout_width="0dp"
+        android:layout_height="127dp"
+        android:background="@drawable/trending"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/liveButton"
+        app:layout_constraintStart_toEndOf="@+id/feedButton"
+        app:layout_constraintTop_toTopOf="@+id/liveButton" />
+
+    <Button
+        android:id="@+id/userButton"
+        android:layout_width="0dp"
+        android:layout_height="127dp"
+        android:background="@drawable/userprofile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/videosButton"
+        app:layout_constraintTop_toTopOf="@+id/liveButton" />
+
+    <Button
+        android:id="@+id/feedButton"
+        android:layout_width="100dp"
+        android:layout_height="127dp"
+        android:background="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/eventsButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/videosButton"
+        android:layout_width="0dp"
+        android:layout_height="127dp"
+        android:background="@drawable/youtube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/userButton"
+        app:layout_constraintStart_toEndOf="@+id/liveButton"
+        app:layout_constraintTop_toTopOf="@+id/userButton" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btnCapturePicture"-->
+<!--        android:layout_width="288dp"-->
+<!--        android:layout_height="56dp"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="645dp"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:foreground="?attr/selectableItemBackground"-->
+<!--        android:text="@string/btn_take_picture"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toLeftOf="@id/btnRecordVideo"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/cameraLayout"/>-->
+
+    <LinearLayout
+        android:id="@+id/cameraLayout"
+        android:layout_width="599dp"
+        android:layout_height="642dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/preview_description"
+            android:textSize="15dp" />
+
+        <!-- To display picture taken -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <!-- To preview video recorded -->
+        <VideoView
+            android:id="@+id/videoPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

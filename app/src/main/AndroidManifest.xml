@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mobileapps.kusiak.hearthisapplication">
+
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="HearThis"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Login.StartupLoginPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Feed.MainFeedPage">
+        </activity>
+        <activity android:name=".LiveAnalysis.MainLiveAnalysisPage">
+        </activity>
+        <activity android:name=".UserProfile.MainUserProfilePage">
+        </activity>
+        <activity android:name=".Videos.MainVideosPage">
+        </activity>
+        <activity android:name=".Trending.MainTrendingPage">
+        </activity>
+        <activity android:name=".Login.Registration">
+        </activity>
+        <activity android:name=".Login.PersonalInformation">
+        </activity>
+        <activity android:name=".UserProfile.UserQuestionsAskedPage">
+        </activity>
+        <activity android:name=".Feed.ViewPost">
+        </activity>
+        <activity android:name=".Feed.MakePost">
+        </activity>
+        <activity android:name=".Trending.OtherUserProfilePage">
+        </activity>
+        <activity android:name=".Trending.OtherUserQuestionsAskedPage">
+        </activity>
+        <activity android:name=".Videos.PlayerActivity">
+        </activity>
+        <activity android:name=".UserProfile.Settings">
+        </activity>
+        <activity android:name=".LiveAnalysis.Analyze">
+        </activity>
+        <activity android:name=".LiveAnalysis.PutAnalyzeOntoScreen">
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
+

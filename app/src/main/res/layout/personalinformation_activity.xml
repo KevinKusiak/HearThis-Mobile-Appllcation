@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/instrumentView"
+            android:layout_width="287dp"
+            android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameView"
+        app:layout_constraintBottom_toTopOf="@id/bioView"/>
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="249dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="64dp"
+        android:background="@android:color/holo_blue_light"
+        android:backgroundTint="#000C1344"
+        android:text="Next Step"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/instrumentView"-->
+<!--        android:layout_width="287dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginBottom="78dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Primary Instrument"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="italic"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bioView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/usernameView" />-->
+
+    <EditText
+        android:id="@+id/bioView"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="118dp"
+        android:ems="10"
+        android:hint="Personal Bio"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/finishButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instrumentView" />
+
+    <EditText
+        android:id="@+id/usernameView"
+        android:layout_width="287dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="68dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/instrumentView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalInfoText" />
+
+    <TextView
+        android:id="@+id/personalInfoText"
+        android:layout_width="349dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="29dp"
+        android:text="Tell Us About Yourself!"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/usernameView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

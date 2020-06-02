@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="465dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginBottom="1dp"
+        android:text="Choose a Topic!"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/goBackButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/goBackButton"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="24dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/backarrow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="465dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="408dp"
+        android:layout_marginBottom="1dp"
+        android:text="Ask Away!"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Spinner
+        android:id="@+id/dropdownTopics"
+        android:layout_width="351dp"
+        android:layout_height="54dp"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="242dp"
+        app:layout_constraintTop_toBottomOf="@id/textView9"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/askQuestion"
+        android:layout_width="542dp"
+        android:layout_height="87dp"
+        android:ems="10"
+        android:gravity="start|top"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="489dp"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/submitPost"
+        android:layout_width="166dp"
+        android:layout_height="119dp"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="652dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/askQuestion"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

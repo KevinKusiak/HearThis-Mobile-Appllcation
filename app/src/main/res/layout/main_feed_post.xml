@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/postTextview"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="106dp"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createCommentText"/>
+
+    <TextView
+        android:id="@+id/comment1"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="."
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postTextview" />
+
+    <TextView
+        android:id="@+id/comment2"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="."
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/comment1"
+        app:layout_constraintBottom_toTopOf="@id/comment3"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <TextView
+        android:id="@+id/comment3"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="."
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/comment1"
+        app:layout_constraintBottom_toTopOf="@id/comment5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <TextView
+        android:id="@+id/comment4"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="."
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/comment3"
+        app:layout_constraintBottom_toTopOf="@id/comment5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <TextView
+        android:id="@+id/comment5"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="."
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="624dp" />
+
+    <Button
+        android:id="@+id/scrollUp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/up"
+        tools:layout_editor_absoluteX="499dp"
+        tools:layout_editor_absoluteY="567dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/comment4"/>
+
+    <Button
+        android:id="@+id/scrollDown"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/down"
+        tools:layout_editor_absoluteX="497dp"
+        tools:layout_editor_absoluteY="651dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/comment5"/>
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="24dp"
+        android:background="@drawable/backarrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/createCommentButton"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="440dp"
+        android:text="Add a Comment"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/commentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Put Comment in Here"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/postTextview"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/createCommentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Comment"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="50dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commentText"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

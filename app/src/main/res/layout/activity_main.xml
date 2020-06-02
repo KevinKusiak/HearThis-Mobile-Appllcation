@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This layout defines how the activity should look when the app is opened as this is the layout which is loaded at first -->
+<!-- LinearLayout stacks the views one after the other which in this case is vertical orientation -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/search_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/videos_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="730dp"
+        android:dividerHeight="5dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/liveButton"
+            android:layout_width="0dp"
+            android:layout_height="127dp"
+            android:background="@drawable/camera"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/videosButton"
+            app:layout_constraintStart_toEndOf="@+id/eventsButton"
+            app:layout_constraintTop_toBottomOf="@+id/textView"/>
+
+        <Button
+            android:id="@+id/eventsButton"
+            android:layout_width="0dp"
+            android:layout_height="127dp"
+            android:background="@drawable/trending"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/liveButton"
+            app:layout_constraintStart_toEndOf="@+id/feedButton"
+            app:layout_constraintTop_toTopOf="@+id/liveButton" />
+
+        <Button
+            android:id="@+id/userButton"
+            android:layout_width="0dp"
+            android:layout_height="127dp"
+            android:background="@drawable/userprofile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/videosButton"
+            app:layout_constraintTop_toTopOf="@+id/liveButton" />
+
+        <Button
+            android:id="@+id/feedButton"
+            android:layout_width="100dp"
+            android:layout_height="127dp"
+            android:background="@drawable/home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/eventsButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/videosButton"
+            android:layout_width="0dp"
+            android:layout_height="127dp"
+            android:background="@drawable/youtube"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/userButton"
+            app:layout_constraintStart_toEndOf="@+id/liveButton"
+            app:layout_constraintTop_toTopOf="@+id/userButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+

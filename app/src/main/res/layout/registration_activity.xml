@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.Registration">
+
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="268dp"
+        android:layout_height="65dp"
+        android:background="@android:color/holo_blue_light"
+        android:backgroundTint="#000C1344"
+        android:text="Next Step"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="802dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/checkSaxophones"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="Saxophones"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="412dp"
+        tools:layout_editor_absoluteY="584dp"
+        app:layout_constraintBottom_toBottomOf="@id/registerButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/checkRhythmSection"
+        />
+
+    <CheckBox
+        android:id="@+id/checkTrumpets"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="Trumpets"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/registerButton"
+        app:layout_constraintLeft_toLeftOf="@id/checkTrombones"
+        app:layout_constraintRight_toRightOf="@id/checkSaxophones"
+        app:layout_constraintTop_toTopOf="@id/checkClassicJazz"
+        tools:layout_editor_absoluteX="221dp" />
+
+    <CheckBox
+        android:id="@+id/checkTrombones"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="Trombones"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/registerButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkJazzMusicians"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="584dp" />
+
+    <CheckBox
+        android:id="@+id/checkRhythmSection"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="Rhythm Section"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/checkSaxophones"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/checkJazzFunk"
+        tools:layout_editor_absoluteX="412dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <CheckBox
+        android:id="@+id/checkClassicJazz"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="Classic Jazz"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/checkTrumpets"
+        app:layout_constraintLeft_toLeftOf="@+id/checkJazzMusicians"
+        app:layout_constraintRight_toRightOf="@id/checkRhythmSection"
+        app:layout_constraintTop_toTopOf="@id/checkHowTo"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <CheckBox
+        android:id="@+id/checkJazzFunk"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="Jazz Funk"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/checkClassicJazz"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView6"
+        tools:layout_editor_absoluteX="412dp"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <CheckBox
+        android:id="@+id/checkJazzMusicians"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="Jazz Musicians"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkTrombones"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkJazzColleges"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <CheckBox
+        android:id="@+id/checkHowTo"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="How-To Jazz"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/checkClassicJazz"
+        app:layout_constraintLeft_toLeftOf="@+id/checkJazzColleges"
+        app:layout_constraintRight_toRightOf="@id/checkJazzFunk"
+        app:layout_constraintTop_toTopOf="@id/textView6" />
+
+    <CheckBox
+        android:id="@+id/checkJazzColleges"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:text="Jazz Colleges"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/checkJazzMusicians"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView6"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <EditText
+        android:id="@+id/pWord"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <EditText
+        android:id="@+id/uName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="517dp"
+        android:text="Pick a Couple Topics!"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pWord" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="465dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:text="Enter a Password!"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/pWord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uName" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="465dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="1dp"
+        android:text="Enter an Email!"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/uName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--    <ProgressBar-->
+    <!--        android:id="@+id/progressBar"-->
+    <!--        style="?android:attr/progressBarStyleHorizontal"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginBottom="108dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/signInStatus"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

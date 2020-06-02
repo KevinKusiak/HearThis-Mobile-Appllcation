@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/liveButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/videosButton"
+        app:layout_constraintStart_toEndOf="@+id/eventsButton"
+        app:layout_constraintTop_toTopOf="@+id/feedButton" />
+
+    <Button
+        android:id="@+id/eventsButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/trending"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/liveButton"
+        app:layout_constraintStart_toEndOf="@+id/feedButton"
+        app:layout_constraintTop_toTopOf="@id/feedButton"/>
+
+    <Button
+        android:id="@+id/userButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/userprofile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/videosButton"
+        app:layout_constraintTop_toTopOf="@+id/liveButton" />
+
+    <Button
+        android:id="@+id/feedButton"
+        android:layout_width="0dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/eventsButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/videosButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/youtube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/userButton"
+        app:layout_constraintStart_toEndOf="@+id/liveButton"
+        app:layout_constraintTop_toTopOf="@+id/userButton" />
+
+    <EditText
+        android:id="@+id/searchTrending"
+        android:layout_width="273dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="Search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/trending1"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchTrending"
+        app:layout_constraintBottom_toTopOf="@id/trending4"/>
+
+    <TextView
+        android:id="@+id/trending2"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toLeftOf="@id/trending1"
+        app:layout_constraintRight_toRightOf="@id/trending3"
+        app:layout_constraintTop_toBottomOf="@id/searchTrending"
+        app:layout_constraintBottom_toTopOf="@id/trending4" />
+
+    <TextView
+        android:id="@+id/trending3"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@id/searchTrending"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/trending4"/>
+
+    <TextView
+        android:id="@+id/trending4"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@id/trending1"
+        app:layout_constraintBottom_toTopOf="@id/trending7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <TextView
+        android:id="@+id/trending5"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/trending2"
+        app:layout_constraintTop_toBottomOf="@id/trending8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/trending6"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/trending9"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trending3" />
+
+    <TextView
+        android:id="@+id/trending7"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/feedButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trending4"/>
+
+    <TextView
+        android:id="@+id/trending8"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/liveButton"
+        app:layout_constraintLeft_toLeftOf="@id/trending7"
+        app:layout_constraintRight_toRightOf="@id/trending9"
+        app:layout_constraintTop_toBottomOf="@id/trending4"/>
+
+    <TextView
+        android:id="@+id/trending9"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/userButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trending4"/>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        app:layout_constraintLeft_toRightOf="@id/searchTrending"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
